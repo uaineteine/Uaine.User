@@ -1,4 +1,5 @@
 ﻿using Uaine.Objects.Primitives;
+using Uaine.Objects.Primitives.ID;
 using Uaine.UID;
 
 namespace Uaine.Users
@@ -7,40 +8,50 @@ namespace Uaine.Users
     {
         public UniqueID ID;
         public Credentials Credentials;
-        public UserGroup Group;
-        public int Rank { get; }
-        public User(string name, string password, UserGroup group) : base(name)
+        public GroupID UserGroupID { get; private set; }
+        public int Rank { get; private set; }
+        public User(string name, string password, PolyID32 group) : base(name)
         {
             ID = new UniqueID(true);
             Credentials = new Credentials(password);
-            Group = group;
+            UserGroupID = (GroupID)group;
             Rank = UserRank.OrdinaryUser;
         }
-        public User(string name, string password, UserGroup group, int userank) : base(name)
+        public User(string name, string password, PolyID32 group, int userank) : base(name)
         {
             ID = new UniqueID(true);
             Credentials = new Credentials(password);
-            Group = group;
+            UserGroupID = (GroupID)group;
             Rank = userank;
         }
-        public User(string name, string password, UserGroup group, UniqueID id) : base(name)
+        public User(string name, string password, PolyID32 group, UniqueID id) : base(name)
         {
             ID = id;
             Credentials = new Credentials(password);
-            Group = group;
+            UserGroupID = (GroupID)group;
             Rank = UserRank.OrdinaryUser;
         }
-        public User(string name, string password, UserGroup group, int userank, UniqueID id) : base(name)
+        public User(string name, string password, PolyID32 group, int userank, UniqueID id) : base(name)
         {
             ID = id;
             Credentials = new Credentials(password);
-            Group = group;
+            UserGroupID = (GroupID)group;
             Rank = userank;
         }
 
         public void ResetPassword(string newpassword)
         {
             Credentials = new Credentials(newpassword);
+        }
+
+        public void ReassignGroup(PolyID32 newUserGroup)
+        {
+            UserGroupID = (GroupID)(newUserGroup);
+        }
+
+        public void SetUserRank(int newRank)
+        {
+            Rank = newRank;
         }
     }
 }
