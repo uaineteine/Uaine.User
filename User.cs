@@ -7,15 +7,35 @@ namespace Uaine.Users
     {
         public UniqueID ID;
         public Credentials Credentials;
-        public User(string name, string password) : base(name)
+        public UserGroup Group;
+        public int Rank { get; }
+        public User(string name, string password, UserGroup group) : base(name)
         {
             ID = new UniqueID(true);
             Credentials = new Credentials(password);
+            Group = group;
+            Rank = UserRank.OrdinaryUser;
         }
-        public User(string name, string password, UniqueID id) : base(name)
+        public User(string name, string password, UserGroup group, int userank) : base(name)
+        {
+            ID = new UniqueID(true);
+            Credentials = new Credentials(password);
+            Group = group;
+            Rank = userank;
+        }
+        public User(string name, string password, UserGroup group, UniqueID id) : base(name)
         {
             ID = id;
             Credentials = new Credentials(password);
+            Group = group;
+            Rank = UserRank.OrdinaryUser;
+        }
+        public User(string name, string password, UserGroup group, int userank, UniqueID id) : base(name)
+        {
+            ID = id;
+            Credentials = new Credentials(password);
+            Group = group;
+            Rank = userank;
         }
 
         public void ResetPassword(string newpassword)
