@@ -1,4 +1,5 @@
-﻿using Uaine.Objects.Primitives;
+﻿using Newtonsoft.Json;
+using Uaine.Objects.Primitives;
 using Uaine.Objects.Primitives.ID;
 
 namespace Uaine.Users
@@ -12,6 +13,18 @@ namespace Uaine.Users
         {
             this.id = (GroupID)id;
             Permissions = permissions;
+        }
+
+        // Serialize method to convert UserGroup to a JSON string
+        public string SerializeToJson()
+        {
+            return JsonConvert.SerializeObject(this);
+        }
+
+        // Deserialize method to create a UserGroup from a JSON string
+        public static UserGroup DeserializeFromJson(string json)
+        {
+            return JsonConvert.DeserializeObject<UserGroup>(json);
         }
     }
 }
