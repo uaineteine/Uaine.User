@@ -23,7 +23,6 @@
             else
             {
                 throw new InvalidOperationException("Permission already exists.");
-                // Alternatively, you can handle this case differently based on your application's needs
             }
         }
 
@@ -36,7 +35,6 @@
             else
             {
                 throw new InvalidOperationException("Permission does not exist.");
-                // Alternatively, you can handle this case differently based on your application's needs
             }
         }
     }
