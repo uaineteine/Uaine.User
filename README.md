@@ -4,7 +4,7 @@ An account manager library with seralisation
 
 ## Getting Started
 
-Add source project to solution with reference to get started or install via [NuGet](https://www.nuget.org/packages/Uaine.IO.Checksum/)
+Add source project to solution with reference to get started or install via [NuGet](https://www.nuget.org/packages/Uaine.Users)
 
 ## Version 1.0
 
