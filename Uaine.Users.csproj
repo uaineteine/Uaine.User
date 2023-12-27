@@ -7,7 +7,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Uaine.IO" Version="1.0.0" />
     <PackageReference Include="Uaine.Objects" Version="2.0.1" />
     <PackageReference Include="Uaine.Random" Version="2.0.0" />
     <PackageReference Include="Uaine.UID" Version="2.0.0" />
