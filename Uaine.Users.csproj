@@ -6,12 +6,13 @@
     <Nullable>enable</Nullable>
     <PackageIcon>icon.png</PackageIcon>
     <Authors>Daniel Stamer-Squair</Authors>
-    <Copyright>Daniel Stamer-Squair 2023</Copyright>
+    <Copyright>Daniel Stamer-Squair 2024</Copyright>
     <Description>An account manager library with seralisation</Description>
     <PackageProjectUrl>https://github.com/uaineteine/Uaine.User</PackageProjectUrl>
     <RepositoryUrl>https://github.com/uaineteine/Uaine.User</RepositoryUrl>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
     <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
+    <Version>1.1</Version>
   </PropertyGroup>
 
   <ItemGroup>

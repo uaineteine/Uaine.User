@@ -8,7 +8,7 @@ namespace Uaine.Users
     public class User : NamedObject
     {
         public UniqueID ID;
-        public Credentials Credentials;
+        protected Credentials Credentials;
         public GroupID UserGroupID { get; private set; }
         public int Rank { get; private set; }
         public User(string name, string password, PolyID32 group) : base(name)
@@ -39,7 +39,6 @@ namespace Uaine.Users
             UserGroupID = (GroupID)group;
             Rank = userank;
         }
-
         public void ResetPassword(string newpassword)
         {
             Credentials = new Credentials(newpassword);
