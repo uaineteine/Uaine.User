@@ -1,1 +1,3 @@
-﻿
+﻿--1.1--
+Credentials for User is now protected
+User accounts can be hashed via the HashUser class
