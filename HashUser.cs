@@ -1,4 +1,4 @@
-﻿using System.Security.Cryptography;
+﻿using Uaine.IO.Checksum;
 
 namespace Uaine.Users
 {
@@ -14,14 +14,9 @@ namespace Uaine.Users
 
         public static string Sha(string input)
         {
-            // Use input string to calculate MD5 hash
-            using (SHA256 sha = SHA256.Create())
-            {
-                byte[] inputBytes = System.Text.Encoding.ASCII.GetBytes(input);
-                byte[] hashBytes = sha.ComputeHash(inputBytes);
-
-                return Convert.ToHexString(hashBytes); 
-            }
+            byte[] inputBytes = System.Text.Encoding.ASCII.GetBytes(input);
+            Checksum sha = new Checksum(inputBytes);
+            return sha.ToString();
         }
     }
 }
