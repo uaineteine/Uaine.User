@@ -9,34 +9,34 @@ namespace Uaine.Users
     {
         public UniqueID ID;
         protected Credentials Credentials;
-        public GroupID UserGroupID { get; private set; }
+        public PolyID32 UserGroupID { get; private set; }
         public int Rank { get; private set; }
         public User(string name, string password, PolyID32 group) : base(name)
         {
             ID = new UniqueID(true);
             Credentials = new Credentials(password);
-            UserGroupID = (GroupID)group;
+            UserGroupID = group;
             Rank = UserRank.OrdinaryUser;
         }
         public User(string name, string password, PolyID32 group, int userank) : base(name)
         {
             ID = new UniqueID(true);
             Credentials = new Credentials(password);
-            UserGroupID = (GroupID)group;
+            UserGroupID = group;
             Rank = userank;
         }
         public User(string name, string password, PolyID32 group, UniqueID id) : base(name)
         {
             ID = id;
             Credentials = new Credentials(password);
-            UserGroupID = (GroupID)group;
+            UserGroupID = group;
             Rank = UserRank.OrdinaryUser;
         }
         public User(string name, string password, PolyID32 group, int userank, UniqueID id) : base(name)
         {
             ID = id;
             Credentials = new Credentials(password);
-            UserGroupID = (GroupID)group;
+            UserGroupID = group;
             Rank = userank;
         }
         public void ResetPassword(string newpassword)
@@ -46,7 +46,7 @@ namespace Uaine.Users
 
         public void ReassignGroup(PolyID32 newUserGroup)
         {
-            UserGroupID = (GroupID)(newUserGroup);
+            UserGroupID = newUserGroup;
         }
 
         public void SetUserRank(int newRank)
