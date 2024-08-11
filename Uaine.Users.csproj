@@ -12,10 +12,11 @@
     <RepositoryUrl>https://github.com/uaineteine/Uaine.User</RepositoryUrl>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
     <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
-    <Version>1.1</Version>
+    <Version>1.1.1</Version>
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Uaine.IO.Checksum" Version="1.0.0" />
     <PackageReference Include="Uaine.Objects" Version="2.0.1" />
     <PackageReference Include="Uaine.Random" Version="2.0.0" />
     <PackageReference Include="Uaine.UID" Version="2.0.0" />

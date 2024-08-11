@@ -1,3 +1,6 @@
-﻿--1.1--
+﻿--1.1.1--
+Using checksum lib to calculate SHA256
+
+--1.1--
 Credentials for User is now protected
 User accounts can be hashed via the HashUser class
