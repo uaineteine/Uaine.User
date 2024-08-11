@@ -1,4 +1,5 @@
 ﻿using System.Text;
+using Uaine.Objects.Primitives.ID;
 
 namespace Uaine.Users
 {
@@ -13,7 +14,7 @@ namespace Uaine.Users
             Groups = new List<UserGroup>();
         }
 
-        public UserGroup GetGroupFromID(GroupID id)
+        public UserGroup GetGroupFromID(PolyID32 id)
         {
             return Groups.FirstOrDefault(group => group.id == id);
         }

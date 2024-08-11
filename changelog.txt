@@ -1,4 +1,7 @@
-﻿--1.1.1--
+﻿--1.1.2--
+Fix: Removed unworking and uncessary GroupID class
+
+--1.1.1--
 Using checksum lib to calculate SHA256
 
 --1.1--
